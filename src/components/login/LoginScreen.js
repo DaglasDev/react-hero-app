@@ -11,7 +11,10 @@ export const LoginScreen = ({ history }) => {
 	const lastPath = localStorage.getItem("lastPath") || "/";
 	const { dispatch } = useContext(AuthContext);
 	const handlesubmit = () => {
-		dispatch({ type: types.login, payload: { name } });
+		dispatch({
+			type: types.login,
+			payload: { name: name.charAt(0).toUpperCase() + name.slice(1) },
+		});
 		history.replace(lastPath);
 	};
 	return (

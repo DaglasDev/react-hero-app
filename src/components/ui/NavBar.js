@@ -14,7 +14,7 @@ export const Navbar = () => {
 		dispatch({ type: types.logout });
 	};
 	return (
-		<nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+		<nav className="navbar navbar-expand navbar-dark bg-dark">
 			<Link className="navbar-brand" to="/">
 				Asociaciones
 			</Link>
